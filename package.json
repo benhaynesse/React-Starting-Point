@@ -6,7 +6,7 @@
   "scripts": {
     "start" : "webpack-dev-server --entry ./src/main.js --output-filename ./dist/bundle.js",
     "build" : "webpack",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test"  : "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "webpack"
