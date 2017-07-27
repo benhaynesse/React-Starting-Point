@@ -6,7 +6,12 @@ module.exports = {
     //Define Output Point
     output:{
         path: __dirname + "/dist",
-        filename:"bundle.js"
+        filename:"bundle.js",
+        publicPath: '/'
+    },
+    //Used to prevent error when refreshing or goig to direct link
+    devServer:{
+        historyApiFallback:true
     },
 
 

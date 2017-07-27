@@ -1,19 +1,16 @@
 {
-  "posts": [
+  "snapchats": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "username": "jimmyboiii54",
+      "age": 22,
+      "gender": "M"
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": 2,
+      "username": "mikejones856",
+      "age": 18,
+      "gender": "M"
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

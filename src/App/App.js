@@ -1,14 +1,20 @@
 import React, {Component} from 'react';
-
+import { BrowserRouter } from 'react-router-dom'
 require('./styles/mainStyles.scss');
+
+import MainContent from './components/MainContent'
+import Navigation from './components/Navigation'
 
 class App extends Component{    
 
     render(){
         return(
+            <BrowserRouter>
             <div>
-                <h2 className="center-text">This is the app</h2>
+                <Navigation/>
+                <MainContent/>
             </div>
+            </BrowserRouter>
         );
     }
 }
