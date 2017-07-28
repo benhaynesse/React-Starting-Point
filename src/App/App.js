@@ -2,8 +2,9 @@ import React, {Component} from 'react';
 import { BrowserRouter } from 'react-router-dom'
 require('./styles/mainStyles.scss');
 
-import MainContent from './components/MainContent'
-import Navigation from './components/Navigation'
+import ActionBar from './components/ActionBar/ActionBar';
+import MainContent from './components/MainBody/MainContent'
+import Navigation from './components/Navbar/Navigation';
 
 class App extends Component{    
 
@@ -11,6 +12,7 @@ class App extends Component{
         return(
             <BrowserRouter>
             <div>
+                <ActionBar/>
                 <Navigation/>
                 <MainContent/>
             </div>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import {getUsers} from '../actions/snapchat'
+import {getUsers} from '../../..//actions/snapchat'
 
 
 class Snapchat extends Component{
@@ -16,8 +16,7 @@ class Snapchat extends Component{
                         {user.username}
                     </li>
                 );
-            })
-            
+            })           
 
         return(            
             <div>{userlist}</div>            
