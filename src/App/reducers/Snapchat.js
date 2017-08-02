@@ -7,8 +7,7 @@ const defaultUserState = ()=>{
 }
 
 
-const users = (state = defaultUserState(), action) => {    
-    let users = null;
+const users = (state = defaultUserState(), action) => {  
     switch(action.type){
         case GET_USERNAMES:
             console.log("GET USERNAMES REDUCER", action);
