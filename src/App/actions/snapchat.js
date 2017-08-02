@@ -1,7 +1,7 @@
 import {GET_USERNAMES} from '../constants';
 import axios from 'axios';
 
-export const  getUsers = () => {    
+export const getUsers = () => {    
     const request = axios.get('http://localhost:3000/snapchats');    
     return(dispatch) => {
         request

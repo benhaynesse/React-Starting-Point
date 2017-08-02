@@ -1,0 +1,13 @@
+@import '../../styles/global.scss';
+
+.defaultButton{
+   background:rgba(255,255,255,0.06);
+   color:$navFontColor;  
+   height:30px;
+   width:67px;
+   border-radius: 4px;
+   border:1px solid $navFontColor;
+   font-weight: bold;   
+   font-family: "Segoe UI";
+   font-size: 12px;
+}

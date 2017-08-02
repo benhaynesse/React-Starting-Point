@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,26 @@
     <title>Title</title>
     <!--Import Font Awesome  -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
+
 <body>
-    
+
+    <script>
+        function cssPropertyValueSupported(prop, value) {
+            var d = document.createElement('div');
+            d.style[prop] = value;
+            return d.style[prop] === value;
+        }
+        if(!cssPropertyValueSupported('display','grid')){
+            alert("Sorry But your device is not currently supported.")
+        }
+    </script>
+
+
     <div id="app"></div>
     <script src="./dist/bundle.js"></script>
 
 </body>
+
 </html>

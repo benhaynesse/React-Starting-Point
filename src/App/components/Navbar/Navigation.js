@@ -8,12 +8,11 @@ class Navigation extends Component {
 
     render() {
         return (
-
             <ul className="navbar">
                 <div className="tabs">
-                    <li id="snapTab"><NavLink to="snap"></NavLink></li>
-                    <li id="instaTab"><NavLink to="insta"></NavLink></li>
-                    <li id="faceTab"><NavLink to="face"></NavLink></li>
+                    <li id="snapTab"><NavLink to="snapchat"></NavLink></li>
+                    <li id="instaTab"><NavLink to="instagram"></NavLink></li>
+                    <li id="faceTab"><NavLink to="facebook"></NavLink></li>
                     <li id="twitterTab"><NavLink to="twitter"></NavLink></li>
                     <li id="menuTab"><NavLink to="menu"></NavLink></li>
                 </div>

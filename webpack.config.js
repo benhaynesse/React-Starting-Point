@@ -33,29 +33,29 @@ module.exports = {
                 test: /\.(jpe?g|png|gif|svg)$/i,
                 loaders: [
                     {
-      loader: 'file-loader',
-      options: {
-        query: {
-          name:'assets/[name].[ext]'
-        }
-      }
-    },
-    {
-      loader: 'image-webpack-loader',
-      options: {
-        query: {
-          mozjpeg: {
-            progressive: true,
-          },
-          gifsicle: {
-            interlaced: true,
-          },
-          optipng: {
-            optimizationLevel: 7,
-          }
-        }
-      }
-    }
+                        loader: 'file-loader',
+                        options: {
+                            query: {
+                                name: 'assets/[name].[ext]'
+                            }
+                        }
+                    },
+                    {
+                        loader: 'image-webpack-loader',
+                        options: {
+                            query: {
+                                mozjpeg: {
+                                    progressive: true,
+                                },
+                                gifsicle: {
+                                    interlaced: true,
+                                },
+                                optipng: {
+                                    optimizationLevel: 7,
+                                }
+                            }
+                        }
+                    }
                 ]
             }
         ]

@@ -1,4 +1,4 @@
-import {GET_USERNAMES} from '../constants/';
+import {GET_USERNAMES} from '../constants/'
 
 //Default User State to prevent state being null when calling map.
 const defaultUserState = ()=>{

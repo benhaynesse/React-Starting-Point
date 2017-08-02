@@ -2,10 +2,11 @@
 
 .navbar{
     overflow: hidden;
-    background-color: $primaryColor;
-    position: fixed; /* Set the navbar to fixed position */
+    background-color: $navColor;
+    position: relative; /* Set the navbar to fixed position */
     bottom: 0; /* Position the navbar at the top of the page */
     width: 100%; /* Full width */   
+    z-index:100;
 }
 
 .navbar .tabs{
@@ -45,7 +46,7 @@
 
     li{
         background-repeat: no-repeat;
-        background-position-x: 6px;
+        background-position-x: 10px;
         background-position-y: 4px;
     }
     

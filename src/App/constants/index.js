@@ -1,1 +1,2 @@
 export const GET_USERNAMES = "GET_USERNAMES";
+export const SHOW_FILTER = "SHOW_FILTER";
