@@ -6,8 +6,6 @@ import {Route}  from 'react-router-dom';
 
 
 //Component Imports
-import Navbar from './components/Navbar/Navigation';
-import ActionBar from './components/ActionBar/ActionBar';
 
 
 //Import For Router
@@ -38,10 +36,8 @@ class App extends Component{
             
             
             <BrowserRouter>
-            <div className="app">
-                <div className="action-bar"><ActionBar/></div>       
-                <div className="grid"><MainBody/></div>
-                <div className="nav-bar"><Navbar/></div>
+            <div className="app">                     
+                <div className="grid"><MainBody/></div>                
             </div>
             </BrowserRouter>
             
