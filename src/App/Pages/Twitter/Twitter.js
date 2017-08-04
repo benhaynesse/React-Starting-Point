@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { setActiveTab } from '../../actions/navbar';
 
-const Twitter = () => {
-    return(
-        <h4>Twitter</h4>
-    )
+class Twitter extends Component {
+
+    componentDidMount(){
+        this.props.setActiveTab(3);
+    }
+
+    render() {
+        return (
+            <h4>Twitter</h4>
+        )
+    }
 }
 
-export default Twitter;
+
+export default connect(null, { setActiveTab })(Twitter);

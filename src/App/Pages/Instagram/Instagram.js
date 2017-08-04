@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { setActiveTab } from '../../actions/navbar';
 
-const Instagram = () => {
-    return(
-        <h4>Instagram</h4>
-    )
+class Instagram extends Component {
+
+    componentDidMount(){
+        this.props.setActiveTab(0);
+    }
+
+    render() {
+        return (
+            <h4>Instagram</h4>
+        )
+    }
 }
 
-export default Instagram;
+
+export default connect(null, { setActiveTab })(Instagram);
