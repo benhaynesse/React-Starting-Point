@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+
 import { setActiveTab } from '../../actions/navbar';
+import { NOT_FOUND_ID } from '../../constants/index';
+
 
 class NotFoundPage extends Component {
 
     componentDidMount(){
-        this.props.setActiveTab(-1);
+        this.props.setActiveTab(NOT_FOUND_ID);
     }
 
     render() {

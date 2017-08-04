@@ -4,6 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 
 //Component Imports
 import Navbar from './components/Navbar/BottomNavgation';
+import Appbar from './components/ActionBar/Actionbar';
 
 //Import For Router
 import Snapchat from './Pages/Snapchat/Snapchat';
@@ -34,6 +35,7 @@ class App extends Component {
         return (
             <BrowserRouter>
                 <div className="app">
+                    <Appbar/>
                     <MainBody />
                     <Navbar />
                 </div>

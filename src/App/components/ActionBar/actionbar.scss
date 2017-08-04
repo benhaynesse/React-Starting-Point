@@ -69,3 +69,31 @@
     margin-right:12px;    
 }
 
+.searchBar{
+        position: relative;
+        margin:auto;    
+        width:50%;           
+        align-self: center;
+        
+        
+        span{
+            position: absolute;
+            padding:1px;
+            margin-top:3px; 
+            margin-left:2px;
+        }
+        input{    
+            height:27px; 
+            padding-left:22px;
+            width:100%;            
+            border-radius:16px;
+            background:rgba(255,255,255,0.15);
+            border:none;
+
+            &:focus{
+            background: rgba(255,255,255,0.2);
+            }
+            
+        }
+
+}

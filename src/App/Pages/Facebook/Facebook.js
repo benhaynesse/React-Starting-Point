@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+
 import { setActiveTab } from '../../actions/navbar';
+import { FACEBOOK_TAB_ID} from '../../constants/index';
 
 class Facebook extends Component {
 
     componentDidMount(){
-        this.props.setActiveTab(2);
+        this.props.setActiveTab(FACEBOOK_TAB_ID);
     }
 
     render() {

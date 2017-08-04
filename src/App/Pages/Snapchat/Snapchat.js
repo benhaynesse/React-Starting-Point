@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { setActiveTab } from '../../actions/navbar'; 
 
+import { setActiveTab } from '../../actions/navbar'; 
+import { SNAPCHAT_TAB_ID} from '../../constants/index';
 
 import FontAwesome from 'react-fontawesome'
 
@@ -31,7 +32,7 @@ class Snapchat extends Component{
     } 
     
     componentDidMount(){
-        this.props.setActiveTab(1);
+        this.props.setActiveTab(SNAPCHAT_TAB_ID);
     }
 
     

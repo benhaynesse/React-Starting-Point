@@ -7,6 +7,7 @@ import { BottomNavigation } from 'material-ui/BottomNavigation';
 import Paper from 'material-ui/Paper';
 
 import NavItem from './NavItem';
+import {INSTAGRAM_TAB_ID, SNAPCHAT_TAB_ID, FACEBOOK_TAB_ID, TWITTER_TAB_ID} from '../../constants/index';
 
 require('./bottomnav.scss');
 
@@ -14,11 +15,12 @@ class BottomNavigationExampleSimple extends Component {
 
     constructor() {
         super();
-        
-
-        //Array With Label and SVG component
         this.tabs = [
-            "Instagram", "Snapchat", "Facebook", "Twitter", "Menu"
+            {"label":"Instagram", "id":INSTAGRAM_TAB_ID},
+            {"label":"Snapchat", "id":SNAPCHAT_TAB_ID},
+            {"label":"Facebook", "id":FACEBOOK_TAB_ID},
+            {"label":"Twitter", "id":TWITTER_TAB_ID},
+            {"label":"Menu", id:-5}
         ]
 
     }
@@ -33,17 +35,16 @@ class BottomNavigationExampleSimple extends Component {
 
     render() {
 
-        let tabs = this.tabs.map((label, index) => 
-            <NavLink key={"nv"+index} style={{'textAlign':'center'}} to={label}>
+        let tabs = this.tabs.map((tab, index) => 
+            <NavLink key={"nv"+index} style={{'textAlign':'center'}} to={tab.label}>
             <NavItem
-                label={label}
-                index={index}
+                label={tab.label}
+                index={tab.id}
                 selectIndex={(i) => this.selectIndex(i)}
                 selectedIndex={this.props.selectedIndex}
             />
             </NavLink>
         )
-
 
         return (
             <div className="navbar-bottom">
