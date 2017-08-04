@@ -17,12 +17,43 @@ const store = createStore(reducer, applyMiddleware(thunk));
 import App from './App/App';
 
 
+//Import the click listenner for Materilize components.
+import injectTapEventPlugin from 'react-tap-event-plugin';
+injectTapEventPlugin();
 
+//Import Materialize UI 
+
+//Import Material UI Stuff
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
+
+
+const muiTheme = getMuiTheme(darkBaseTheme,{
+  
+  fontFamily: 'Roboto, sans-serif',
+  palette: {
+    primary1Color: '#262228',    
+    textColor: '#FFF',      
+    primary2Color: '#FF0000',
+    primary3Color: '#0000FF',    
+    accent1Color: '#262228',
+    accent2Color: '#FF0000',
+    accent3Color: '#0000FF',    
+    alternateTextColor: '#7BAFE4',
+    canvasColor: '#ccc',
+    borderColor: '#7BAFE4',    
+    pickerHeaderColor: '#0000FF',    
+    shadowColor: '#000',  
+  },
+});
 
 
 //Rener The App, Add the store.
 ReactDOM.render(
     <Provider store={store}>
+        <MuiThemeProvider muiTheme={muiTheme}>
         <App />
+        </MuiThemeProvider>
     </Provider>,
     document.getElementById("app"));

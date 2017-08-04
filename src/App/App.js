@@ -3,6 +3,8 @@ import { BrowserRouter } from 'react-router-dom'
 import {Route}  from 'react-router-dom';
 
 
+
+
 //Component Imports
 import Navbar from './components/Navbar/Navigation';
 import ActionBar from './components/ActionBar/ActionBar';
@@ -32,7 +34,9 @@ const MainBody = () => {
 class App extends Component{    
 
     render(){
-        return(            
+        return(     
+            
+            
             <BrowserRouter>
             <div className="app">
                 <div className="action-bar"><ActionBar/></div>       
@@ -40,6 +44,7 @@ class App extends Component{
                 <div className="nav-bar"><Navbar/></div>
             </div>
             </BrowserRouter>
+            
         );
     }
 }
