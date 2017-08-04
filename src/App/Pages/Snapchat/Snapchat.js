@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { setActiveTab } from '../../actions/navbar'; 
+
+
 import FontAwesome from 'react-fontawesome'
 
 
@@ -24,7 +28,13 @@ class Snapchat extends Component{
               
 
         })
-    }    
+    } 
+    
+    componentDidMount(){
+        this.props.setActiveTab(1);
+    }
+
+    
 
     
 
@@ -34,4 +44,6 @@ class Snapchat extends Component{
         
 }
 
-export default Snapchat;
+
+
+export default connect(null,{setActiveTab})(Snapchat);

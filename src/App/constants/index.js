@@ -1,2 +1,1 @@
-export const GET_USERNAMES = "GET_USERNAMES";
-export const SHOW_FILTER = "SHOW_FILTER";
+export const SET_ACTIVE_TAB = "SET_ACTIVE_TAB";
