@@ -34,7 +34,7 @@ class BottomNavigationExampleSimple extends Component {
     render() {
 
         let tabs = this.tabs.map((label, index) => 
-            <NavLink style={{'textAlign':'center'}} to={label}>
+            <NavLink key={"nv"+index} style={{'textAlign':'center'}} to={label}>
             <NavItem
                 label={label}
                 index={index}
@@ -55,8 +55,7 @@ class BottomNavigationExampleSimple extends Component {
     }
 }
 
-function mapStateToProps(store){
-    console.log(store);
+function mapStateToProps(store){    
     return {selectedIndex:store.navbar}
 }
 

@@ -11,7 +11,7 @@ const HamburgerIcon = (props) => {
     return (
 
         <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} viewBox="0 0 41 24">
-            <g stroke={backgroundColor} stroke-width="1" fill={backgroundColor} stroke-linecap="round">
+            <g stroke={backgroundColor} strokeWidth="1" fill={backgroundColor} strokeLinecap="round">
                 <path style={{'stroke':backgroundColor,'fill':backgroundColor, "transition": "fill 0.8s ease" }} d="M1.507 23h38.071M1.507 12h38.071M1.507 1h50.071" />
             </g>
         </svg>

@@ -10,7 +10,7 @@ import Snapchat from './Pages/Snapchat/Snapchat';
 import Instagram from './Pages/Instagram/Instagram';
 import Facebook from './Pages/Facebook/Facebook';
 import Twitter from './Pages/Twitter/Twitter';
-import NotFoundPage from './Pages/404NotFound';
+import NotFoundPage from './Pages/404/404NotFound';
 
 require('./styles/mainStyles.scss');
 
