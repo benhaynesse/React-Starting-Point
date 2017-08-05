@@ -13,21 +13,39 @@ import Facebook from './Pages/Facebook/Facebook';
 import Twitter from './Pages/Twitter/Twitter';
 import NotFoundPage from './Pages/404/404NotFound';
 
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'; // ES6
+
+
 require('./styles/mainStyles.scss');
+require('./styles/fadein.scss');
 
 
-const MainBody = () => {
-    return (
-        <Switch>
-            <Route exact path="/" component={Snapchat} />
-            <Route path="/snapchat" component={Snapchat} />
-            <Route path="/instagram" component={Instagram} />
-            <Route path="/facebook" component={Facebook} />
-            <Route path="/twitter" component={Twitter} />             
-            <Route path="*" component={NotFoundPage}/>            
-        </Switch>
-    )
-}
+
+const MainBody = () => (
+
+
+    <Route render={({ location }) => (
+        <ReactCSSTransitionGroup
+            transitionName="slideLeft"
+            transitionEnterTimeout={1000}
+            transitionLeaveTimeout={800}>
+            <Route location={location} key={location.key}>
+                <Switch>
+                    <Route exact path="/" component={Snapchat} />
+                    <Route path="/snapchat" component={Snapchat} />
+                    <Route path="/instagram" component={Instagram} />
+                    <Route path="/facebook" component={Facebook} />
+                    <Route path="/twitter" component={Twitter} />
+                    <Route path="*" component={NotFoundPage} />
+                </Switch>
+            </Route>
+        </ReactCSSTransitionGroup>
+    )} />
+)
+
+
+
+
 
 class App extends Component {
 
@@ -35,7 +53,7 @@ class App extends Component {
         return (
             <BrowserRouter>
                 <div className="app">
-                    <Appbar/>
+                    <Appbar />
                     <MainBody />
                     <Navbar />
                 </div>

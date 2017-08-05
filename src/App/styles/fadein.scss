@@ -1,0 +1,38 @@
+.example-enter {
+  opacity: 0.01;
+  position: fixed;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 1000ms ease-in;
+}
+
+.example-leave {
+  opacity: 1;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 1000ms ease-in;
+}
+
+
+.slideLeft-enter {
+  position: absolute;
+    left: -100px;
+}
+
+.slideLeft-enter.slideLeft-enter-active {
+  left:0;
+  transition: left 1000ms ease-in;
+}
+
+.slideLeft-leave {
+  opacity: 1;
+}
+
+.slideLeft-leave.slideLeft-leave-active {
+  opacity:0;
+  transition: opacity 800ms ease-in;
+}

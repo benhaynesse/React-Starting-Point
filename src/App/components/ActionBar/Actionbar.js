@@ -55,6 +55,7 @@ class Actionbar extends Component {
 
                 </AppBar>
                 <Drawer
+                containerStyle={{'transition':'all 1s cubic-bezier(0.23, 1, 0.32, 1)'}}
                     docked={false}
                     width={200}
                     open={this.state.openNav}
@@ -65,7 +66,8 @@ class Actionbar extends Component {
                     </FloatingActionButton>
                 </Drawer>
 
-                <Drawer
+                <Drawer     
+                containerStyle={{'transition':'all 1s cubic-bezier(0.23, 1, 0.32, 1)'}}              
                     docked={false}
                     width={200}
                     open={this.state.openAdd}
