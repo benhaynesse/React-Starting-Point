@@ -16,12 +16,9 @@ const store = createStore(reducer, applyMiddleware(thunk));
 //App Imports
 import App from './App/App';
 
-
 //Import the click listenner for Materilize components.
 import injectTapEventPlugin from 'react-tap-event-plugin';
 injectTapEventPlugin();
-
-//Import Materialize UI 
 
 //Import Material UI Stuff
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';

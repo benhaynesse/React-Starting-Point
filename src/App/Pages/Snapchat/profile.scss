@@ -1,0 +1,91 @@
+.card{
+    width:96%;
+    margin-left:2%;
+    background:rgba(204, 204, 204,0.2) !important;
+}
+
+.card-header{
+  
+}
+
+.card-media{
+    padding:5px;
+
+    .user-username{
+        padding:11px;
+        font-size:18pt;
+    }
+
+    .user-name{
+        padding:5px;
+        font-size: 11pt;        
+    }
+
+    .card-details{
+        text-align: center;
+
+        img{
+            width:50%;
+        }
+
+        .user-expand{
+            position: absolute;
+            right:10px;
+            top:14px;
+            font-size: 14pt;
+        }
+    }
+    
+}
+
+.card-info{
+    display:grid;    
+    grid-template-columns: 0 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    background:rgba(120,120,120, 0.7);
+    grid-gap:12px;
+    
+    h4{        
+        font-size:10pt;
+    }
+
+    .card-info-likes{
+        grid-column: 2;
+    }
+
+    .card-info-like{        
+        justify-self: end;
+        grid-column:4;
+    }
+
+
+    .card-info-tags{
+        
+        grid-column: 2 / span 4;
+        grid-row: 2;
+        color:#70A4F2;
+    }
+
+    .card-info-time{
+        grid-row: 3;
+        grid-column: 1 / span 2;
+        margin-left:0;
+        font-style: italic;
+    }
+
+    .card-info-button{
+        justify-self:end;
+        
+        width:60%;
+        height:30%;;
+        font-size: 8pt;
+        grid-row: 3;
+        grid-column:3 / span 4;
+    }
+}
+
+.expandable{
+    opacity: 0;
+    height:0;
+}
+

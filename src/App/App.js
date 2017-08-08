@@ -21,10 +21,13 @@ require('./styles/fadein.scss');
 
 
 
+
 const MainBody = () => (
 
 
+
     <Route render={({ location }) => (
+
         <ReactCSSTransitionGroup
             transitionName="slideLeft"
             transitionEnterTimeout={1000}
@@ -43,19 +46,22 @@ const MainBody = () => (
     )} />
 )
 
-
-
-
-
 class App extends Component {
 
     render() {
         return (
             <BrowserRouter>
                 <div className="app">
-                    <Appbar />
-                    <MainBody />
-                    <Navbar />
+                    <div className="app-bar">
+                        <Appbar />
+                    </div>
+                    <div className="main-content">
+                        <MainBody />
+                        <div style={{height:'75px', textAlign:'center'}}>Created By Jarni</div>
+                    </div>
+                    <div className="nav-bar">
+                        <Navbar />
+                    </div>
                 </div>
             </BrowserRouter>
         );

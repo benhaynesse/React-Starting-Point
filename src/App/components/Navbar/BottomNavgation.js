@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom'
 
-
 import { BottomNavigation } from 'material-ui/BottomNavigation';
 import Paper from 'material-ui/Paper';
 
@@ -20,8 +19,8 @@ class BottomNavigationExampleSimple extends Component {
             {"label":"Snapchat", "id":SNAPCHAT_TAB_ID},
             {"label":"Facebook", "id":FACEBOOK_TAB_ID},
             {"label":"Twitter", "id":TWITTER_TAB_ID},
-            {"label":"Menu", id:-5}
-        ]
+            {"label":"Search", id:-5}
+        ]        
 
     }
 
@@ -60,4 +59,4 @@ function mapStateToProps(store){
     return {selectedIndex:store.navbar}
 }
 
-export default connect(mapStateToProps)(BottomNavigationExampleSimple);
+export default connect(mapStateToProps,null)(BottomNavigationExampleSimple);
